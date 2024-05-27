@@ -310,6 +310,6 @@ while true; do
 		eval "$var=\$original_$var"
 	done
 
-	echo "$($CC) Trying again in 1 minute"
-	sleep 60
+	echo "$($CC) Trying again in 10 seconds"
+	sleep 10
 done

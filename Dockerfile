@@ -3,6 +3,9 @@ FROM alpine:3.17
 #* Define an arg variable
 ARG	TWITCH_USER
 
+RUN apk add --no-cache alpine-conf && \
+    setup-timezone -z America/Los_Angeles
+
 #* Upgrade the system and install dependencies
 RUN apk add --no-cache --upgrade python3 tar wget bash jq rclone curl \
 	&& python3 -m ensurepip \
